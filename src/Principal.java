@@ -4,9 +4,9 @@ public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
 
-        miPelicula.nombre = "Crazy and Stupid Love";
-        miPelicula.fechaDeLanzamiento = 2016;
-        miPelicula.duracionEnMinutos = 180;
+        miPelicula.setNombre("Crazy and Stupid Love");
+        miPelicula.setFechaDeLanzamiento(2016);
+        miPelicula.setDuracionEnMinutos(180);
 
         miPelicula.muestraFichaTecnica();
 

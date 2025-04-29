@@ -2,17 +2,37 @@ package com.nexxxt.screenmatch.modelos;
 
 public class Pelicula {
 
-    public String nombre;
+    private String nombre;
 
-    public int fechaDeLanzamiento;
+    private int fechaDeLanzamiento;
 
-    public int duracionEnMinutos;
+    private int duracionEnMinutos;
 
-    boolean incluidoEnElPlan;
+    private boolean incluidoEnElPlan;
 
     private double sumaDeLasEvaluaciones;
 
     private int totalDeLasEvaluaciones;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
+    public void setDuracionEnMinutos(int duracionEnMinutos) {
+        this.duracionEnMinutos = duracionEnMinutos;
+    }
+
+    public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
+        this.incluidoEnElPlan = incluidoEnElPlan;
+    }
+
+    public int getTotalDeLasEvaluaciones() {
+        return totalDeLasEvaluaciones;
+    }
 
     public void muestraFichaTecnica(){
         System.out.println("Nombre de la pelicula: " + nombre);
@@ -30,19 +50,4 @@ public class Pelicula {
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
     }
 
-    public double getSumaDeLasEvaluaciones() {
-        return sumaDeLasEvaluaciones;
-    }
-
-    public void setSumaDeLasEvaluaciones(double sumaDeLasEvaluaciones) {
-        this.sumaDeLasEvaluaciones = sumaDeLasEvaluaciones;
-    }
-
-    public int getTotalDeLasEvaluaciones() {
-        return totalDeLasEvaluaciones;
-    }
-
-    public void setTotalDeLasEvaluaciones(int totalDeLasEvaluaciones) {
-        this.totalDeLasEvaluaciones = totalDeLasEvaluaciones;
-    }
 }
