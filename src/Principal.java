@@ -7,6 +7,7 @@ public class Principal {
         miPelicula.setNombre("Crazy and Stupid Love");
         miPelicula.setFechaDeLanzamiento(2016);
         miPelicula.setDuracionEnMinutos(180);
+        miPelicula.setIncluidoEnElPlan(true);
 
         miPelicula.muestraFichaTecnica();
 
