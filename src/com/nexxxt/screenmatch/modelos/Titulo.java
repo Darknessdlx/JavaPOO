@@ -29,14 +29,34 @@ public class Titulo {
         this.incluidoEnElPlan = incluidoEnElPlan;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getFechaDeLanzamiento() {
+        return fechaDeLanzamiento;
+    }
+
+    public int getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+
+    public boolean isIncluidoEnElPlan() {
+        return incluidoEnElPlan;
+    }
+
+    public double getSumaDeLasEvaluaciones() {
+        return sumaDeLasEvaluaciones;
+    }
+
     public int getTotalDeLasEvaluaciones() {
         return totalDeLasEvaluaciones;
     }
 
     public void muestraFichaTecnica(){
-        System.out.println("Nombre de la pelicula: " + nombre);
-        System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
-        System.out.println("Duracion de la pelicula en minutos: " + duracionEnMinutos);
+        System.out.println(STR."Nombre de la pelicula: \{nombre}");
+        System.out.println(STR."Fecha de lanzamiento: \{fechaDeLanzamiento}");
+        System.out.println(STR."Duracion de la pelicula en minutos: \{getDuracionEnMinutos()}");
 
     }
 
