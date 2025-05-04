@@ -1,6 +1,7 @@
 package com.nexxxt.screenmatch.calculos;
 
 import com.nexxxt.screenmatch.modelos.Pelicula;
+import com.nexxxt.screenmatch.modelos.Titulo;
 
 public class CalculadoraDeTiempo {
 
@@ -10,11 +11,8 @@ public class CalculadoraDeTiempo {
         return tiempoTotal;
     }
 
-    public void setTiempoTotal(int tiempoTotal) {
-        this.tiempoTotal = tiempoTotal;
-    }
 
-    public void incluye(Pelicula pelicula) {
-        tiempoTotal += pelicula.getDuracionEnMinutos();
+    public void incluye(Titulo titulo) {
+        this.tiempoTotal += titulo.getDuracionEnMinutos();
     }
 }

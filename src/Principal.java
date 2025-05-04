@@ -1,4 +1,6 @@
 import com.nexxxt.screenmatch.calculos.CalculadoraDeTiempo;
+import com.nexxxt.screenmatch.calculos.FiltroRecomendacion;
+import com.nexxxt.screenmatch.modelos.Episodio;
 import com.nexxxt.screenmatch.modelos.Pelicula;
 import com.nexxxt.screenmatch.modelos.Serie;
 
@@ -38,10 +40,30 @@ public class Principal {
 
         System.out.println("************************");
 
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Matrix");
+        otraPelicula.setFechaDeLanzamiento(1999);
+        otraPelicula.setDuracionEnMinutos(138);
+        otraPelicula.setIncluidoEnElPlan(true);
+
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
         calculadora.incluye( miPelicula);
         calculadora.incluye(miPelicula);
-        System.out.println(calculadora.getTiempoTotal());
+        calculadora.incluye(otraPelicula);
+        System.out.println(STR."Tiempo necesario para ver tus titulos estas vacaciones: \{calculadora.getTiempoTotal()} minutos");
 
+        FiltroRecomendacion filtro = new FiltroRecomendacion();
+        filtro.filtra(miPelicula);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("Codigo binario");
+        episodio.setSerie(miSerie);
+        episodio.setTotalVisualizaciones(50);
+        System.out.println("*************************************");
+        filtro.filtra(episodio);
     }
+
+
+
 }

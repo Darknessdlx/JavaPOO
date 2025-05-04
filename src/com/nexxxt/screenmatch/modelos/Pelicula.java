@@ -1,6 +1,8 @@
 package com.nexxxt.screenmatch.modelos;
 
-public class Pelicula extends Titulo {
+import com.nexxxt.screenmatch.calculos.Clasificable;
+
+public class Pelicula extends Titulo implements Clasificable {
 
     private String director;
 
@@ -10,5 +12,10 @@ public class Pelicula extends Titulo {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClasificable() {
+        return (int) (calculaMedia() / 2);
     }
 }
