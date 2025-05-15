@@ -6,6 +6,7 @@ import com.nexxxt.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -41,7 +42,10 @@ public class PrincipalConListas {
         System.out.println("listaDeArtistas = " + listaDeArtistas);
 
         Collections.sort(lista);
-        System.out.println("lista = " + lista);
+        System.out.println("lista ordenada por titulo = " + lista);
+
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("lista ordenada por fecha = " + lista);
 
     }
 }
