@@ -1,3 +1,5 @@
+package com.nexxxt.screenmatch.principal;
+
 import com.nexxxt.screenmatch.calculos.CalculadoraDeTiempo;
 import com.nexxxt.screenmatch.calculos.FiltroRecomendacion;
 import com.nexxxt.screenmatch.modelos.Episodio;
@@ -43,7 +45,6 @@ public class Principal {
         otraPelicula.setIncluidoEnElPlan(true);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
-        calculadora.incluye( miPelicula);
         calculadora.incluye(miPelicula);
         calculadora.incluye(otraPelicula);
         System.out.println(STR."Tiempo necesario para ver tus titulos estas vacaciones: \{calculadora.getTiempoTotal()} minutos");
